@@ -16,7 +16,7 @@
     "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
     "lint": "tslint \"src/**/*.ts\"",
     "postpublish": "git push",
-    "prepare": "typings install && npm run build",
+    "prepare": "npm run build",
     "preversion": "git pull && npm run verify",
     "test": "npm run clean && tsc && nyc ava",
     "verify": "npm run lint && npm run coverage && npm run build && npm run dependency-check",

@@ -5,7 +5,9 @@
 [![Build status][travis-image]][travis-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
 
-Color map generator.
+Color map generator with no dependency.
+
+It is small (10k not minified) compare to other libraries.
 
 ## `createColorMap(from, to, shades, alpha?)`
 

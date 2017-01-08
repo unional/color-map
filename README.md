@@ -9,6 +9,8 @@ Color map generator with no dependency.
 
 It is tiny (<13k not minified) compare to other libraries.
 
+Inspired from ['colormap'](https://github.com/bpostlethwaite/colormap).
+
 ## `createColors(from, to, shades, alpha?)`
 
 ```ts

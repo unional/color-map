@@ -29,6 +29,7 @@ const rgbRange = createColors([0, 0, 255], [0, 255, 128], 72)
 import { rgbHex } from 'color-map'
 
 rgbHex([0, 128, 255]) // '#0080ff'
+rgbHex([0, 128, 255, 0.3]) // '#0080ff'
 ```
 
 ## `rgbaString(rgba)`

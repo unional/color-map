@@ -7,18 +7,18 @@
 
 Color map generator with no dependency.
 
-It is small (10k not minified) compare to other libraries.
+It is small (12k not minified) compare to other libraries.
 
-## `createColorMap(from, to, shades, alpha?)`
+## `createColors(from, to, shades, alpha?)`
 
 ```ts
-import { createColorMap } from 'color-map'
+import { createColors } from 'color-map'
 
 // creates array of [r,g,b,a]
-const rgbaRange = createColorMap([0, 0, 255], [0, 255, 128], 72, [0, 1])
+const rgbaRange = createColors([0, 0, 255], [0, 255, 128], 72, [0, 1])
 
 // creates array of [r,g,b]
-const rgbRange = createColorMap([0, 0, 255], [0, 255, 128], 72)
+const rgbRange = createColors([0, 0, 255], [0, 255, 128], 72)
 ```
 
 ## `rgbHex(rgb)`
@@ -35,6 +35,16 @@ rgbHex([0, 128, 255]) // '#0080ff'
 import { rgbaString } from 'color-map'
 
 rgbaString([0, 128, 255, 0.2]) // 'rgba(0,128,255,0.3)`
+```
+
+## `createColorsFromMap(colormap, shades, alpha?)`
+
+```ts
+import { createColorsFromMap, ColorMap } from 'color-map'
+
+const summer: ColorMap = [{ index:0, rgb:[0,128,102] }, { index:1, rgb:[255,255,102] }]
+
+const colors = createColorsFromMap(summer, 60)
 ```
 
 ## Contribute

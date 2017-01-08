@@ -1,6 +1,6 @@
 import { RGB, RGBA, Alpha } from './interfaces'
 
-export function createColorMap(from: RGB, to: RGB, shades: number, alpha?: Alpha): RGB[] | RGBA[] {
+export function createColorMap(from: RGB, to: RGB, shades: number, alpha?: Alpha): RGBA[] {
   const rgba: any[] = []
   const start = [...from]
   const diff = [
@@ -18,11 +18,9 @@ export function createColorMap(from: RGB, to: RGB, shades: number, alpha?: Alpha
     const color = [
       Math.round(start[0] + i * diff[0] * inc),
       Math.round(start[1] + i * diff[1] * inc),
-      Math.round(start[2] + i * diff[2] * inc)
+      Math.round(start[2] + i * diff[2] * inc),
+      alpha ? start[3] + i * diff[3] * inc : 1
     ]
-    if (alpha) {
-      color.push(start[3] + i * diff[3] * inc)
-    }
     rgba.push(color)
   }
   return rgba

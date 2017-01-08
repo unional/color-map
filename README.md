@@ -19,7 +19,7 @@ import { createColors } from 'color-map'
 // creates array of [r,g,b,a]
 const rgbaRange = createColors([0, 0, 255], [0, 255, 128], 72, [0, 1])
 
-// creates array of [r,g,b]
+// creates array of [r,g,b,1]
 const rgbRange = createColors([0, 0, 255], [0, 255, 128], 72)
 ```
 

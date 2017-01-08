@@ -37,7 +37,8 @@ rgbHex([0, 128, 255, 0.3]) // '#0080ff'
 ```ts
 import { rgbaString } from 'color-map'
 
-rgbaString([0, 128, 255, 0.2]) // 'rgba(0,128,255,0.3)`
+rgbaString([0, 128, 255, 0.2]) // 'rgba(0,128,255,0.2)`
+
 ```
 
 ## `createColorsFromMap(colormap, shades, alpha?)`

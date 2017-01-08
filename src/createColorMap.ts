@@ -1,6 +1,6 @@
 import { RGB, RGBA, Alpha } from './interfaces'
 
-export function create(from: RGB, to: RGB, shades: number, alpha?: Alpha): RGB[] | RGBA[] {
+export function createColorMap(from: RGB, to: RGB, shades: number, alpha?: Alpha): RGB[] | RGBA[] {
   const rgba: any[] = []
   const start = [...from]
   const diff = [

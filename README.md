@@ -7,7 +7,33 @@
 
 Color map generator.
 
+## `createColorMap(from, to, shades, alpha?)`
 
+```ts
+import { createColorMap } from 'color-map'
+
+// creates array of [r,g,b,a]
+const rgbaRange = createColorMap([0, 0, 255], [0, 255, 128], 72, [0, 1])
+
+// creates array of [r,g,b]
+const rgbRange = createColorMap([0, 0, 255], [0, 255, 128], 72)
+```
+
+## `rgbHex(rgb)`
+
+```ts
+import { rgbHex } from 'color-map'
+
+rgbHex([0, 128, 255]) // '#0080ff'
+```
+
+## `rgbaString(rgba)`
+
+```ts
+import { rgbaString } from 'color-map'
+
+rgbaString([0, 128, 255, 0.2]) // 'rgba(0,128,255,0.3)`
+```
 
 ## Contribute
 

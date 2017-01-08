@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "inlineSources": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2015",
+      "es2015.reflect"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "newLine": "LF",
+    "noImplicitAny": false,
+    "removeComments": false,
+    "sourceMap": true,
+    "sourceRoot": "/color-map",
+    "strictNullChecks": true,
+    "target": "es5"
+  }
+}

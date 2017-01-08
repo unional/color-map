@@ -26,6 +26,10 @@
     "name": "Homa Wong",
     "email": "homawong@gmail.com"
   },
+  "homepage": "https://github.com/unional/color-map",
+  "bugs": {
+    "url": "https://github.com/unional/color-map/issues"
+  },
   "license": "MIT",
   "ava": {
     "files": [

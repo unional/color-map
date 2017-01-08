@@ -1,6 +1,6 @@
 import { RGB, RGBA, Alpha } from './interfaces'
 
-export function create(from: RGB, to: RGB, steps: number, alpha?: Alpha): RGB[] | RGBA[] {
+export function create(from: RGB, to: RGB, shades: number, alpha?: Alpha): RGB[] | RGBA[] {
   const rgba: any[] = []
   const start = [...from]
   const diff = [
@@ -12,9 +12,9 @@ export function create(from: RGB, to: RGB, steps: number, alpha?: Alpha): RGB[] 
     start.push(alpha[0])
     diff.push(alpha[1] - alpha[0])
   }
-  for (let i = 0; i < steps; i++) {
+  for (let i = 0; i < shades; i++) {
     const inc = 1 /
-      Math.max(steps - 1, 1)
+      Math.max(shades - 1, 1)
     const color = [
       Math.round(start[0] + i * diff[0] * inc),
       Math.round(start[1] + i * diff[1] * inc),

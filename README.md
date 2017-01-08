@@ -7,7 +7,7 @@
 
 Color map generator with no dependency.
 
-It is small (12k not minified) compare to other libraries.
+It is tiny (<13k not minified) compare to other libraries.
 
 ## `createColors(from, to, shades, alpha?)`
 

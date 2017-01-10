@@ -15,7 +15,7 @@
     "noImplicitAny": false,
     "removeComments": false,
     "sourceMap": true,
-    "sourceRoot": "color-map",
+    "sourceRoot": "/color-map",
     "strictNullChecks": true,
     "target": "es5"
   }

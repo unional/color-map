@@ -1,7 +1,7 @@
 {
   "name": "color-map",
   "description": "Color map generator",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "main": "dist/commonjs/index.js",
   "typings": "dist/commonjs/index.d.ts",
   "files": [

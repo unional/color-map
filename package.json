@@ -18,7 +18,7 @@
     "lint": "tslint \"src/**/*.ts\"",
     "postpublish": "git push",
     "prepare": "npm run build",
-    "preversion": "git pull && npm run verify",
+    "preversion": "git pull && npm run verify && git add -f dist/color-map*",
     "test": "npm run clean && tsc && nyc ava",
     "verify": "npm run lint && npm run coverage && npm run build && npm run dependency-check",
     "watch": "npm run clean && node scripts/watch.js"

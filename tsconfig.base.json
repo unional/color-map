@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "inlineSources": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "inlineSources": true,
     "lib": [
       "dom",
       "es2015",
@@ -17,7 +17,6 @@
     "noUnusedParameters": true,
     "removeComments": false,
     "sourceMap": true,
-    "sourceRoot": "/color-map",
     "strictNullChecks": true,
     "target": "es5"
   }

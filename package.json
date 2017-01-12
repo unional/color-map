@@ -8,8 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build-commonjs",
+    "build": "npm run clean && npm run build-commonjs && npm run build-global",
     "build-commonjs": "tsc -p tsconfig.commonjs.json",
+    "build-global": "webpack --config webpack.config.global.js",
     "clean": "rimraf dist",
     "coverage": "npm test && nyc check-coverage --branches 85 --functions 85 --lines 85",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
@@ -29,6 +30,10 @@
   "homepage": "https://github.com/unional/color-map",
   "bugs": {
     "url": "https://github.com/unional/color-map/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unional/color-map.git"
   },
   "license": "MIT",
   "ava": {
@@ -57,9 +62,13 @@
     "eslint": "^3.13.0",
     "eslint-config-unional": "^0.2.3",
     "nyc": "^10.0.0",
+    "param-case": "^2.1.0",
+    "pascal-case": "^2.0.0",
     "rimraf": "^2.5.4",
+    "source-map-loader": "^0.1.6",
     "tslint": "^4.3.1",
     "tslint-config-unional": "^0.6.0",
-    "typescript": "^2.1.4"
+    "typescript": "^2.1.4",
+    "webpack": "^2.2.0-rc.4"
   }
 }

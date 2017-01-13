@@ -14,7 +14,6 @@ const moduleName = pascalCase(pkg.name)
 export default {
   dest: `dist/${paramCase(pkg.name)}.js`,
   entry: 'dist/commonjs/index.js',
-  exports: 'named',
   format: 'iife',
   moduleId: pkg.name,
   moduleName,

@@ -5,7 +5,8 @@ import nodeBuiltins from 'rollup-plugin-node-builtins';
 import nodeGlobals from 'rollup-plugin-node-globals';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import sourcemaps from 'rollup-plugin-sourcemaps';
-// import uglify from 'rollup-plugin-uglify';
+import uglify from 'rollup-plugin-uglify';
+import { minify } from 'uglify-js';
 
 const pkg = require('./package');
 
@@ -14,7 +15,6 @@ const moduleName = pascalCase(pkg.name)
 export default {
   dest: `dist/${paramCase(pkg.name)}.es2015.js`,
   entry: 'dist/es2015/index.js',
-  exports: 'named',
   format: 'iife',
   moduleId: pkg.name,
   moduleName,
@@ -36,7 +36,7 @@ export default {
     nodeGlobals(),
     nodeBuiltins(),
     commonjs(),
-    // uglify()
+    uglify({}, minify)
   ],
   sourceMap: true
 };

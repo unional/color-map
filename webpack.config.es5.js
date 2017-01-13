@@ -28,5 +28,9 @@ module.exports = {
     filename: `${filename}.es5.js`,
     library: globalVariable,
     libraryTarget: 'var'
-  }
+  },
+  plugins: [
+    // Currently this removes the source map. Need to see why is that.
+    // new webpack.optimize.UglifyJsPlugin()
+  ]
 }

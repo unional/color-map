@@ -1,7 +1,7 @@
 {
   "name": "color-map",
   "description": "Color map generator",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "main": "dist/es5/index.js",
   "module": "dist/es2015/index.js",
   "typings": "dist/es5/index.d.ts",

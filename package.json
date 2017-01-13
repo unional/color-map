@@ -2,24 +2,26 @@
   "name": "color-map",
   "description": "Color map generator",
   "version": "0.5.4",
-  "main": "dist/commonjs/index.js",
-  "typings": "dist/commonjs/index.d.ts",
+  "main": "dist/es5/index.js",
+  "module": "dist/es2015/index.js",
+  "typings": "dist/es5/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build-commonjs && npm run build-global",
-    "build-commonjs": "tsc -p tsconfig.commonjs.json",
-    "build-global": "rollup --config rollup.config.global.js",
+    "build": "npm run clean && npm run build-es5 && npm run build-es2015 && npm run build-bundle",
+    "build-es5": "tsc -p tsconfig.es5.json",
+    "build-es2015": "tsc -p tsconfig.es2015.json",
+    "build-bundle": "rollup --config rollup.config.es2015.js && webpack --config webpack.config.es5.js",
     "clean": "rimraf dist",
-    "coverage": "npm test && nyc check-coverage --branches 85 --functions 85 --lines 85",
+    "coverage": "nyc --check-coverage --branches 85 --functions 85 --lines 85 npm test",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
     "lint": "tslint \"src/**/*.ts\"",
     "postpublish": "git push",
     "prepare": "npm run build",
     "preversion": "git pull && npm run verify && git add -f dist/color-map*",
-    "test": "npm run clean && tsc && nyc ava",
+    "test": "npm run clean && tsc && ava",
     "verify": "npm run lint && npm run coverage && npm run build && npm run dependency-check",
     "watch": "npm run clean && node scripts/watch.js"
   },
@@ -55,7 +57,7 @@
   },
   "devDependencies": {
     "aurelia-logging": "^1.2.0",
-    "aurelia-logging-color": "^0.4.1",
+    "aurelia-logging-color": "^0.4.5",
     "aurelia-polyfills": "^1.1.1",
     "ava": "^0.17.0",
     "browser-env": "^2.0.19",
@@ -75,8 +77,10 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-sourcemaps": "^0.4.1",
     "rollup-plugin-uglify": "^1.0.1",
+    "source-map-loader": "^0.1.6",
     "tslint": "^4.3.1",
     "tslint-config-unional": "^0.6.0",
-    "typescript": "^2.1.5"
+    "typescript": "^2.1.5",
+    "webpack": "^2.2.0-rc.4"
   }
 }

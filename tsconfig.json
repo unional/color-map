@@ -9,7 +9,6 @@
   "buildOnSave": false,
   "compileOnSave": false,
   "include": [
-    "src/**/*",
-    "typings/index.d.ts"
+    "src/**/*"
   ]
 }

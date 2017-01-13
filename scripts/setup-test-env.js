@@ -1,7 +1,7 @@
 require('aurelia-polyfills')
 const LogManager = require('aurelia-logging')
-const ConsoleAppender = require('aurelia-logging-console').ConsoleAppender
+const ColorAppender = require('aurelia-logging-color').ColorAppender
 
-LogManager.addAppender(new ConsoleAppender())
+LogManager.addAppender(new ColorAppender())
 
 LogManager.setLevel(LogManager.logLevel.debug)

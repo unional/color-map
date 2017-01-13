@@ -1,13 +1,10 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "dist/commonjs",
+    "outDir": "dist/es5",
     "sourceRoot": "/color-map"
   },
   "files": [
     "src/index.ts"
-  ],
-  "include": [
-    "typings/index.d.ts"
   ]
 }

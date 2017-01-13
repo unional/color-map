@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "module": "es2015",
     "outDir": "dist/es2015",
     "sourceRoot": "/color-map",
     "target": "es2015"

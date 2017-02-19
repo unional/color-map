@@ -27,7 +27,15 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: `${filename}.es5.js`,
     library: globalVariable,
-    libraryTarget: 'var'
+    libraryTarget: 'var',
+    devtoolModuleFilenameTemplate: (info) => {
+      if (info.identifier.lastIndexOf('.ts') === info.identifier.length - 3) {
+        return `webpack:///${pjson.name}/${info.resource.slice(9)}`
+      }
+      else {
+        return `webpack:///${info.resourcePath}`
+      }
+    }
   },
   plugins: [
     // Currently this removes the source map. Need to see why is that.

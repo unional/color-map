@@ -1,2 +1,77 @@
-!function(r){"use strict";function n(r,n,t,o){const u=[],e=[...r],h=[n[0]-r[0],n[1]-r[1],n[2]-r[2]];o&&(e.push(o[0]),h.push(o[1]-o[0]));for(let s=0;s<t;s++){const r=1/Math.max(t-1,1),n=[Math.round(e[0]+s*h[0]*r),Math.round(e[1]+s*h[1]*r),Math.round(e[2]+s*h[2]*r),o?e[3]+s*h[3]*r:1];u.push(n)}return u}function t(r,t,o){if(t<r.length)throw new Error(`Requires at least ${r.length} shades.`);const u=[],e=[];for(let h=0;h<r.length;h++)e.push(Math.round(r[h].index*t));for(let h=0;h<r.length-1;h++){const t=e[h+1]-e[h],s=r[h].rgb,i=r[h+1].rgb;u.push(...n(s,i,t,o))}return u}function o(r){let n="#";for(let t=0;t<3;t++)n+=u(r[t]);return n}function u(r){let n=(+r).toString(16);return n.length<2?"0"+n:n}function e(r){return"rgba("+r.join(",")+")"}r.createColors=n,r.createColorsFromMap=t,r.rgbHex=o,r.rgbaString=e}(this.ColorMap=this.ColorMap||{});
+(function (exports) {
+'use strict';
+
+function createColors(from, to, shades, alpha) {
+    const rgba = [];
+    const start = [...from];
+    const diff = [
+        to[0] - from[0],
+        to[1] - from[1],
+        to[2] - from[2]
+    ];
+    if (alpha) {
+        start.push(alpha[0]);
+        diff.push(alpha[1] - alpha[0]);
+    }
+    for (let i = 0; i < shades; i++) {
+        const inc = 1 /
+            Math.max(shades - 1, 1);
+        const color = [
+            Math.round(start[0] + i * diff[0] * inc),
+            Math.round(start[1] + i * diff[1] * inc),
+            Math.round(start[2] + i * diff[2] * inc),
+            alpha ? start[3] + i * diff[3] * inc : 1
+        ];
+        rgba.push(color);
+    }
+    return rgba;
+}
+
+/**
+ * Create colors with specified color map.
+ */
+function createColorsFromMap(colormap, shades, alpha) {
+    if (shades < colormap.length) {
+        throw new Error(`Requires at least ${colormap.length} shades.`);
+    }
+    const result = [];
+    const steps = [];
+    for (let i = 0; i < colormap.length; i++) {
+        steps.push(Math.round(colormap[i].index * shades));
+    }
+    for (let i = 0; i < colormap.length - 1; i++) {
+        const n = steps[i + 1] - steps[i];
+        const from = colormap[i].rgb;
+        const to = colormap[i + 1].rgb;
+        result.push(...createColors(from, to, n, alpha));
+    }
+    return result;
+}
+
+/**
+ * Convert `RGB` to `#rgb`
+ * JavaScript note: no check for array length, use it properly.
+ */
+function rgbHex(rgb) {
+    let hex = '#';
+    for (let i = 0; i < 3; i++) {
+        hex += d2h(rgb[i]);
+    }
+    return hex;
+}
+function d2h(d) {
+    let s = (+d).toString(16);
+    return s.length < 2 ? '0' + s : s;
+}
+
+function rgbaString(rgba) {
+    return 'rgba(' + rgba.join(',') + ')';
+}
+
+exports.createColors = createColors;
+exports.createColorsFromMap = createColorsFromMap;
+exports.rgbHex = rgbHex;
+exports.rgbaString = rgbaString;
+
+}((this.ColorMap = this.ColorMap || {})));
 //# sourceMappingURL=color-map.es2015.js.map

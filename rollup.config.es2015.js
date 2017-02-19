@@ -5,8 +5,6 @@ import nodeBuiltins from 'rollup-plugin-node-builtins';
 import nodeGlobals from 'rollup-plugin-node-globals';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import sourcemaps from 'rollup-plugin-sourcemaps';
-import uglify from 'rollup-plugin-uglify';
-import { minify } from 'uglify-js';
 
 const pkg = require('./package');
 
@@ -35,8 +33,7 @@ export default {
     }),
     nodeGlobals(),
     nodeBuiltins(),
-    commonjs(),
-    uglify({}, minify)
+    commonjs()
   ],
   sourceMap: true
 };

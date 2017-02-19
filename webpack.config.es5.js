@@ -36,13 +36,5 @@ module.exports = {
         return `webpack:///${info.resourcePath}`
       }
     }
-  },
-  plugins: [
-    // Currently this removes the source map. Need to see why is that.
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false },
-      output: { comments: false },
-      sourceMap: true
-    })
-  ]
+  }
 }

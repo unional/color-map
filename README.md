@@ -48,7 +48,7 @@ rgbaString([0, 128, 255, 0.2]) // 'rgba(0,128,255,0.2)`
 ```ts
 import { createColorsFromMap, ColorMap } from 'color-map'
 
-const summer: ColorMap = [{ index:0, rgb:[0,128,102] }, { index:1, rgb:[255,255,102] }]
+const summer: ColorMap = [{ index: 0, rgb: [0,128,102] }, { index: 1, rgb: [255,255,102] }]
 
 const colors = createColorsFromMap(summer, 60)
 ```

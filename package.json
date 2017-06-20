@@ -82,6 +82,6 @@
     "tslint": "^5.0.0",
     "tslint-config-unional": "^0.8.0",
     "typescript": "^2.1.5",
-    "webpack": "^2.2.0-rc.4"
+    "webpack": "^3.0.0"
   }
 }

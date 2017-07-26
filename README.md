@@ -56,7 +56,7 @@ const colors = createColorsFromMap(summer, 60)
 ## Contribute
 
 ```sh
-# right after clone
+# after fork
 npm install
 
 # begin making changes

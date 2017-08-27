@@ -61,7 +61,7 @@
     "aurelia-logging": "^1.2.0",
     "aurelia-logging-color": "^0.5.0",
     "aurelia-polyfills": "^1.1.1",
-    "ava": "^0.21.0",
+    "ava": "^0.22.0",
     "browser-env": "^3.0.0",
     "colormap": "^2.2.0",
     "core-js": "^2.4.1",

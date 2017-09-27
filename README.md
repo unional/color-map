@@ -1,5 +1,7 @@
 # color-map
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/unional/color-map.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build status][travis-image]][travis-url]

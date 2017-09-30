@@ -8,14 +8,17 @@ import sourcemaps from 'rollup-plugin-sourcemaps';
 
 const pkg = require('./package');
 
-const moduleName = pascalCase(pkg.name)
+const name = pascalCase(pkg.name)
 
 export default {
-  dest: `dist/${paramCase(pkg.name)}.es2015.js`,
-  entry: 'dist/es2015/index.js',
-  format: 'iife',
+  input: 'dist/es2015/index.js',
+  output: {
+    file: `dist/${paramCase(pkg.name)}.es2015.js`,
+    name,
+    sourcemap: true,
+    format: 'iife'
+  },
   moduleId: pkg.name,
-  moduleName,
   // This may comes handy
   // onwarn(warning) {
   //   // Suppress this error message: "The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten"
@@ -34,6 +37,5 @@ export default {
     nodeGlobals(),
     nodeBuiltins(),
     commonjs()
-  ],
-  sourceMap: true
+  ]
 };

@@ -7,9 +7,9 @@ var ColorMap =
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -33,9 +33,6 @@ var ColorMap =
 /******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
 /******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
@@ -64,7 +61,7 @@ var ColorMap =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,7 +70,9 @@ var ColorMap =
 
 "use strict";
 
+Object.defineProperty(exports, "__esModule", { value: true });
 function createColors(from, to, shades, alpha) {
+    if (alpha === void 0) { alpha = [1, 1]; }
     var rgba = [];
     var start = from.slice();
     var diff = [
@@ -85,9 +84,9 @@ function createColors(from, to, shades, alpha) {
         start.push(alpha[0]);
         diff.push(alpha[1] - alpha[0]);
     }
+    var inc = 1 /
+        Math.max(shades - 1, 1);
     for (var i = 0; i < shades; i++) {
-        var inc = 1 /
-            Math.max(shades - 1, 1);
         var color = [
             Math.round(start[0] + i * diff[0] * inc),
             Math.round(start[1] + i * diff[1] * inc),
@@ -107,6 +106,23 @@ exports.createColors = createColors;
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(0));
+__export(__webpack_require__(2));
+__export(__webpack_require__(3));
+__export(__webpack_require__(4));
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
 var createColors_1 = __webpack_require__(0);
 /**
  * Create colors with specified color map.
@@ -132,11 +148,12 @@ exports.createColorsFromMap = createColorsFromMap;
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Convert `RGB` to `#rgb`
  * JavaScript note: no check for array length, use it properly.
@@ -156,30 +173,16 @@ function d2h(d) {
 
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function rgbaString(rgba) {
-    return 'rgba(' + rgba.join(',') + ')';
-}
-exports.rgbaString = rgbaString;
-
-
-/***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+Object.defineProperty(exports, "__esModule", { value: true });
+function rgbaString(rgba) {
+    return 'rgba(' + rgba.join(',') + ')';
 }
-__export(__webpack_require__(0));
-__export(__webpack_require__(1));
-__export(__webpack_require__(2));
-__export(__webpack_require__(3));
+exports.rgbaString = rgbaString;
 
 
 /***/ })

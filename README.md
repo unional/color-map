@@ -1,13 +1,12 @@
 # color-map
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/unional/color-map.svg)](https://greenkeeper.io/)
-
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
-[![Build status][travis-image]][travis-url]
-[![Coverage Status][coveralls-image]][coveralls-url]
 ![badge-size-es5-url]
 ![badge-size-es2015-url]
+[![Build status][travis-image]][travis-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/unional/color-map.svg)](https://greenkeeper.io/)
 
 Color map generator with no dependency.
 

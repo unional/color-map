@@ -10,31 +10,50 @@ const filename = paramCase(pjson.name)
 const globalVariable = pascalCase(filename)
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   entry: {
-    [filename]: './dist/es5/index'
-  },
-  module: {
-    rules: [
-      {
-        enforce: 'pre',
-        loader: "source-map-loader",
-        test: /\.js?$/
-      }
-    ]
+    'color-map': './src/index.ts',
+    'color-map.min': './src/index.ts'
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: `${filename}.es5.js`,
+    filename: '[name].es5.js',
     library: globalVariable,
-    libraryTarget: 'var',
-    devtoolModuleFilenameTemplate: (info) => {
-      if (info.identifier.lastIndexOf('.ts') === info.identifier.length - 3) {
-        return `webpack:///${pjson.name}/${info.resource.slice(9)}`
+    libraryTarget: 'umd'
+  },
+  // output: {
+  //   path: path.join(__dirname, 'dist'),
+  //   filename: `${filename}.es5.js`,
+  //   library: globalVariable,
+  //   libraryTarget: 'var',
+  //   devtoolModuleFilenameTemplate: (info) => {
+  //     console.log(info.resource, info.resourcePath)
+  //     if (info.identifier.lastIndexOf('.ts') === info.identifier.length - 3) {
+  //       return `webpack:///${pjson.name}/${info.resource.slice(9)}`
+  //     }
+  //     else {
+  //       return `webpack:///${info.resourcePath}`
+  //     }
+  //   }
+  // },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader',
+        exclude: /node_modules/,
+        query: {
+          declaration: false
+        }
       }
-      else {
-        return `webpack:///${info.resourcePath}`
-      }
-    }
+      //   {
+      //     enforce: 'pre',
+      //     loader: "source-map-loader",
+      //     test: /\.js?$/
+      //   }
+    ]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
   }
 }

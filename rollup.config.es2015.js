@@ -11,9 +11,9 @@ const pkg = require('./package');
 const name = pascalCase(pkg.name)
 
 export default {
-  input: 'dist/es2015/index.js',
+  input: 'dist-es2015/index.js',
   output: {
-    file: `dist/${paramCase(pkg.name)}.es2015.js`,
+    file: `dist-es2015/${paramCase(pkg.name)}.es2015.js`,
     name,
     sourcemap: true,
     format: 'iife'

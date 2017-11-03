@@ -3,11 +3,8 @@
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "inlineSources": true,
     "lib": [
-      "dom",
-      "es2015",
-      "es2015.reflect"
+      "es2015"
     ],
     "module": "commonjs",
     "moduleResolution": "node",
@@ -16,8 +13,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": false,
-    "sourceMap": true,
     "strictNullChecks": true,
-    "target": "es5"
-  }
+    "sourceMap": true
+  },
+  "files": [
+    "src/index.ts"
+  ]
 }

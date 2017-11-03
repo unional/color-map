@@ -1,14 +1,11 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "outDir": "dist/spec"
-  },
+  "extends": "./tsconfig.es5.json",
   "atom": {
     "rewriteTsconfig": false
   },
   "buildOnSave": false,
   "compileOnSave": false,
   "include": [
-    "src/**/*"
+    "src"
   ]
 }

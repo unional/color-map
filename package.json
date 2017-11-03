@@ -2,29 +2,28 @@
   "name": "color-map",
   "description": "Color map generator",
   "version": "0.5.9",
-  "main": "dist/es5/index.js",
-  "module": "dist/es2015/index.js",
-  "typings": "dist/es5/index.d.ts",
+  "main": "dist-es5/index.js",
+  "module": "dist-es2015/index.js",
+  "typings": "dist-es5/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "dist-es5",
+    "dist-es2015"
   ],
   "scripts": {
     "build": "npm run clean && npm run build-es5 && npm run build-es2015",
     "build-es5": "tsc -p tsconfig.es5.json",
     "build-es2015": "tsc -p tsconfig.es2015.json",
-    "bundle": "npm run bundle-rollup && npm run bundle-webpack",
-    "bundle-rollup": "rollup --config rollup.config.es2015.js",
-    "bundle-webpack": "webpack --config webpack.config.es5.js",
-    "clean": "rimraf dist-es5 dist-es2015",
-    "coverage": "nyc --check-coverage --branches 85 --functions 85 --lines 85 npm test",
+    "bundle": "webpack",
+    "clean": "rimraf dist dist-es5 dist-es2015",
+    "coverage": "nyc npm test",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
     "lint": "tslint -p tsconfig.json 'src/**/*.ts'",
     "postpublish": "git push",
-    "prepublish": "npm run build && npm run bundle",
-    "preversion": "git pull && npm run verify && git add -f dist-es5/color-map*",
+    "preversion": "git pull && npm run verify",
     "test": "npm run clean && tsc && ava",
-    "verify": "npm run lint && npm run coverage && npm run build && npm run dependency-check",
+    "verify": "npm run lint && npm run coverage && npm run build && npm run bundle && npm run dependency-check",
     "watch": "npm run clean && node scripts/watch.js"
   },
   "author": {
@@ -84,6 +83,7 @@
     "tslint": "^5.8.0",
     "tslint-config-unional": "^0.8.0",
     "typescript": "^2.6.1",
+    "uglifyjs-webpack-plugin": "^1.0.1",
     "webpack": "^3.8.1"
   }
 }

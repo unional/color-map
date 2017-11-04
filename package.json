@@ -8,7 +8,8 @@
   "files": [
     "dist",
     "dist-es5",
-    "dist-es2015"
+    "dist-es2015",
+    "src"
   ],
   "scripts": {
     "build": "npm run clean && npm run build-es5 && npm run build-es2015",

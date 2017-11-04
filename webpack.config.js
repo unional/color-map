@@ -3,7 +3,6 @@ const paramCase = require('param-case')
 const pascalCase = require('pascal-case')
 const path = require('path')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-
 const pjson = require('./package.json')
 
 const filename = paramCase(pjson.name)
@@ -15,7 +14,7 @@ module.exports = {
     'color-map': './src/index'
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve('dist'),
     filename: '[name].es5.js',
     library: globalVariable,
     devtoolModuleFilenameTemplate: (info) => {

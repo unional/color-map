@@ -1,7 +1,7 @@
 {
   "name": "color-map",
   "description": "Color map generator",
-  "version": "0.5.11",
+  "version": "0.0.0-development",
   "main": "dist-es5/index.js",
   "module": "dist-es2015/index.js",
   "typings": "dist-es5/index.d.ts",
@@ -24,7 +24,8 @@
     "prepublishOnly": "npm run build && npm run bundle",
     "test": "npm run clean && tsc && ava",
     "verify": "npm run lint && npm run coverage && npm run build && npm run bundle && npm run dependency-check",
-    "watch": "npm run clean && node scripts/watch.js"
+    "watch": "npm run clean && node scripts/watch.js",
+    "semantic-release": "semantic-release"
   },
   "author": {
     "name": "Homa Wong",
@@ -84,6 +85,7 @@
     "tslint-config-unional": "^0.8.0",
     "typescript": "^2.6.1",
     "uglifyjs-webpack-plugin": "^1.0.1",
-    "webpack": "^3.8.1"
+    "webpack": "^3.8.1",
+    "semantic-release": "^11.0.2"
   }
 }

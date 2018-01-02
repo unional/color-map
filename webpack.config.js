@@ -27,9 +27,10 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        query: {
-          declaration: false
+        loader: 'ts-loader',
+        options: {
+          configFile: 'tsconfig.es5.json',
+          transpileOnly: true
         }
       }
     ]

@@ -5,6 +5,7 @@
 [![Build status][travis-image]][travis-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
 ![badge-size-es5-url]
+
 [![Greenkeeper][greenkeeper-image]][greenkeeper-url]
 [![Semantic Release][semantic-release-image]][semantic-release-url]
 

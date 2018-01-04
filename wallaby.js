@@ -1,7 +1,7 @@
 module.exports = function (wallaby) {
   return {
     "files": [
-      "tsconfig.*",
+      { pattern: 'tsconfig.*', instrument: false },
       "src/**/*.ts",
       "!src/**/*.spec.ts"
     ],

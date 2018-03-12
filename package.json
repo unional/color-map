@@ -71,7 +71,7 @@
     "param-case": "^2.1.1",
     "pascal-case": "^2.0.1",
     "rimraf": "^2.6.2",
-    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-commonjs": "^9.1.0",
     "semantic-release": "^12.2.2",
     "ts-loader": "^3.2.0",
     "tslint": "^5.8.0",

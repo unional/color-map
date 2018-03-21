@@ -17,6 +17,7 @@
     "build-es2015": "tsc -p tsconfig.es2015.json",
     "bundle": "webpack",
     "clean": "rimraf dist dist-es5 dist-es2015",
+    "codecov": "codecov",
     "coverage": "nyc npm test",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",

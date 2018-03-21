@@ -79,6 +79,22 @@ test('match colormap output', t => {
   [0, 255, 128, 1]])
 })
 
+test('Uses alpha in from/to', t => {
+  const actual = createColors([0, 0, 0, .2], [1, 1, 1, .8], 2)
+  t.deepEqual(actual, [[0, 0, 0, .2], [1, 1, 1, .8]])
+})
+
+test('alpha in from but not in to, will use alpha in from', t => {
+  const actual = createColors([0, 0, 0, .2], [1, 1, 1], 2)
+  t.deepEqual(actual, [[0, 0, 0, .2], [1, 1, 1, .2]])
+})
+
+test('alpha in `to` but not in `from`, will use alpha in `to`', t => {
+  const actual = createColors([0, 0, 0], [1, 1, 1, .5], 2)
+  t.deepEqual(actual, [[0, 0, 0, .5], [1, 1, 1, .5]])
+})
+
+
 test('match actual colors', t => {
   let actual = createColors([150, 0, 90], [0, 0, 200], 72, [0, 1])
 

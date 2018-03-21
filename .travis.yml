@@ -30,4 +30,4 @@ after_success:
   - ./scripts/run-on-node-version.sh 9 "npm install --no-save codecov && npm run codecov"
 
 after_script:
-  - ./scripts/run-on-latest-node.sh "greenkeeper-lockfile-upload"
+  - ./scripts/run-on-node-version.sh "greenkeeper-lockfile-upload"

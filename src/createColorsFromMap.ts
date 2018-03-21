@@ -1,5 +1,5 @@
-import { ColorMap, Alpha, RGBA, RGB } from './interfaces'
 import { createColors } from './createColors'
+import { ColorMap, Alpha, RGBA } from './interfaces'
 
 /**
  * Create colors with specified color map.
@@ -17,7 +17,7 @@ export function createColorsFromMap(colormap: ColorMap, shades: number, alpha?: 
 
   for (let i = 0; i < colormap.length - 1; i++) {
     const n = steps[i + 1] - steps[i]
-    const from: RGB = colormap[i].rgb;
+    const from = colormap[i].rgb;
     const to = colormap[i + 1].rgb;
     result.push(...createColors(from, to, n, alpha))
   }

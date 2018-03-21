@@ -11,6 +11,9 @@
     "dist-es2015",
     "src"
   ],
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "build": "npm run clean && npm run build-es5 && npm run build-es2015",
     "build-es5": "tsc -p tsconfig.es5.json",

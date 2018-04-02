@@ -8,8 +8,7 @@
   "files": [
     "dist",
     "dist-es5",
-    "dist-es2015",
-    "src"
+    "dist-es2015"
   ],
   "engines": {
     "node": ">=6"

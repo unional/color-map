@@ -19,8 +19,7 @@ export function createColors(
   if (start.length === 3)
     start.push(alpha[0])
 
-  const inc = 1 /
-    Math.max(shades - 1, 1)
+  const inc = 1 / Math.max(shades - 1, 1)
 
   const rgba: any[] = []
   for (let i = 0; i < shades; i++) {

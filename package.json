@@ -74,7 +74,7 @@
     "semantic-release": "^15.2.0",
     "ts-loader": "^4.2.0",
     "tslint": "^5.10.0",
-    "tslint-config-unional": "^0.9.3",
+    "tslint-config-unional": "^0.10.0",
     "typescript": "^2.8.3",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.6.0",

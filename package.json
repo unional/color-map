@@ -76,7 +76,7 @@
     "tslint": "^5.10.0",
     "tslint-config-unional": "^0.9.3",
     "typescript": "^2.8.3",
-    "uglifyjs-webpack-plugin": "^1.2.5",
+    "uglifyjs-webpack-plugin": "^2.1.0",
     "webpack": "^4.6.0",
     "webpack-cli": "^3.0.8"
   }

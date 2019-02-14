@@ -1,40 +1,7 @@
 {
   "name": "color-map",
-  "description": "Color map generator",
   "version": "0.0.0-development",
-  "main": "dist-es5/index.js",
-  "module": "dist-es2015/index.js",
-  "typings": "dist-es5/index.d.ts",
-  "files": [
-    "dist",
-    "dist-es5",
-    "dist-es2015",
-    "src"
-  ],
-  "engines": {
-    "node": ">=6"
-  },
-  "scripts": {
-    "build": "npm run clean && npm run build-es5 && npm run build-es2015",
-    "build-es5": "tsc -p tsconfig.es5.json",
-    "build-es2015": "tsc -p tsconfig.es2015.json",
-    "bundle": "webpack",
-    "clean": "rimraf dist dist-es5 dist-es2015",
-    "codecov": "codecov",
-    "coverage": "nyc npm test",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
-    "lint": "tslint -p tsconfig.json 'src/**/*.ts'",
-    "prepublishOnly": "npm run build && npm run bundle",
-    "test": "npm run clean && tsc && ava",
-    "verify": "npm run lint && npm run coverage && npm run build && npm run bundle && npm run dependency-check",
-    "watch": "npm run clean && node scripts/watch.js",
-    "semantic-release": "semantic-release"
-  },
-  "author": {
-    "name": "Homa Wong",
-    "email": "homawong@gmail.com"
-  },
+  "description": "Color map generator",
   "homepage": "https://github.com/unional/color-map",
   "bugs": {
     "url": "https://github.com/unional/color-map/issues"
@@ -44,38 +11,38 @@
     "url": "https://github.com/unional/color-map.git"
   },
   "license": "MIT",
-  "ava": {
-    "files": [
-      "dist-es5/**/*.spec.js"
-    ],
-    "source": [
-      "scripts/*.js",
-      "dist-es5/**/*.js",
-      "*.json"
-    ]
+  "author": {
+    "name": "Homa Wong (unional)",
+    "email": "homawong@gmail.com"
   },
-  "nyc": {
-    "exclude": [
-      "scripts",
-      "**/*.spec.*",
-      "**/fixtures/**/*"
-    ]
+  "files": [
+    "dist",
+    "lib",
+    "libm"
+  ],
+  "main": "lib/index.js",
+  "module": "libm/index.js",
+  "jsnext:main": "libm/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.es5.json && tsc -p tsconfig.esnext.json",
+    "bundle": "webpack",
+    "clean": "rimraf lib",
+    "dc": "npm run dependency-check",
+    "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
+    "lint": "tslint -p tsconfig.json",
+    "prepublishOnly": "npm run build && npm run bundle",
+    "test": "jest",
+    "verify": "npm run lint && npm run build && npm run dependency-check && npm run bundle && jest --coverage",
+    "watch": "jest --watch"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
+    "@unional/devpkg-node": "^1.2.3",
+    "assertron": "^6.1.0",
     "colormap": "^2.3.0",
-    "dependency-check": "^3.0.0",
-    "eslint": "^5.0.0",
-    "eslint-plugin-harmony": "^1.0.3",
-    "nyc": "^11.7.1",
     "param-case": "^2.1.1",
     "pascal-case": "^2.0.1",
-    "rimraf": "^2.6.2",
-    "semantic-release": "^15.2.0",
     "ts-loader": "^4.2.0",
-    "tslint": "^5.10.0",
-    "tslint-config-unional": "^0.9.3",
-    "typescript": "^2.8.3",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.6.0",
     "webpack-cli": "^3.0.8"

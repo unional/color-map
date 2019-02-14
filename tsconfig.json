@@ -1,11 +1,15 @@
 {
-  "extends": "./tsconfig.es5.json",
-  "atom": {
-    "rewriteTsconfig": false
+  "extends": "./tsconfig.esnext.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "plugins": [
+      {
+        "name": "tslint-language-service"
+      }
+    ]
   },
-  "buildOnSave": false,
-  "compileOnSave": false,
   "include": [
-    "src"
+    "src",
+    "typings"
   ]
 }

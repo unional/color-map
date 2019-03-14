@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@unional/devpkg-node": "^1.2.3",
-    "assertron": "^6.1.0",
+    "assertron": "^7.0.0",
     "colormap": "^2.3.0",
     "param-case": "^2.1.1",
     "pascal-case": "^2.0.1",

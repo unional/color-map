@@ -1,7 +1,5 @@
-import a from 'assertron'
-
-import { ColorMap } from './interfaces'
-import { createColorsFromMap } from './createColorsFromMap'
+import a from 'assertron';
+import { ColorMap, createColorsFromMap } from '.';
 
 test('summer colors', () => {
   const summer: ColorMap = [{ index: 0, rgb: [0, 128, 102] }, { index: 1, rgb: [255, 255, 102] }]

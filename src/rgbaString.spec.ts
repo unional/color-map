@@ -1,6 +1,4 @@
-
-
-import { rgbaString } from './rgbaString'
+import { rgbaString } from '.';
 
 test('[255,128,16,0] => rgba(255,128,16,0)', () => {
   expect(rgbaString([255, 128, 16, 0])).toBe('rgba(255,128,16,0)')

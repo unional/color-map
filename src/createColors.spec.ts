@@ -1,5 +1,5 @@
-import { createColors } from './createColors';
-import t from 'assert'
+import t from 'assert';
+import { createColors } from '.';
 
 test('match colormap output', () => {
   const actual = createColors([0, 0, 255], [0, 255, 128], 72)

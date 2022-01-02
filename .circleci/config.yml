@@ -29,13 +29,13 @@ workflows:
 jobs:
   local:
     docker:
-      - image: circleci/node:11
+      - image: circleci/node:17
     steps:
       - checkout
       - run: npm run verify
   node-latest:
     docker:
-      - image: circleci/node:11
+      - image: circleci/node:17
     steps:
       - checkout
       - restore_cache:
@@ -63,7 +63,7 @@ jobs:
           path: .reports/junit
   node10:
     docker:
-      - image: 'circleci/node:9'
+      - image: 'circleci/node:17'
     steps:
       - checkout
       - attach_workspace:
@@ -73,7 +73,7 @@ jobs:
           path: .reports/junit
   node9:
     docker:
-      - image: 'circleci/node:9'
+      - image: 'circleci/node:17'
     steps:
       - checkout
       - attach_workspace:
@@ -83,7 +83,7 @@ jobs:
           path: .reports/junit
   node8:
     docker:
-      - image: 'circleci/node:8'
+      - image: 'circleci/node:17'
     steps:
       - checkout
       - attach_workspace:
@@ -93,7 +93,7 @@ jobs:
           path: .reports/junit
   node6:
     docker:
-      - image: 'circleci/node:6'
+      - image: 'circleci/node:17'
     steps:
       - checkout
       - attach_workspace:
@@ -103,7 +103,7 @@ jobs:
           path: .reports/junit
   release:
     docker:
-      - image: circleci/node:11
+      - image: circleci/node:17
     steps:
       - checkout
       - attach_workspace:

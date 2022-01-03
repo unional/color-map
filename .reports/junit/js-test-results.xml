@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="12" failures="0" errors="0" time="0.769">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-01-03T01:23:34" time="0.388" tests="4">
+    <testcase classname=" [0,0,0] =&gt; #000000" name=" [0,0,0] =&gt; #000000" time="0.003">
+    </testcase>
+    <testcase classname=" [255,128,16] =&gt; #ff8010" name=" [255,128,16] =&gt; #ff8010" time="0">
+    </testcase>
+    <testcase classname=" [255,128,16,0] =&gt; #ff8010" name=" [255,128,16,0] =&gt; #ff8010" time="0.001">
+    </testcase>
+    <testcase classname=" [255,128,16,0.8] =&gt; #ff8010" name=" [255,128,16,0.8] =&gt; #ff8010" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-01-03T01:23:34" time="0.395" tests="2">
+    <testcase classname=" [255,128,16,0] =&gt; rgba(255,128,16,0)" name=" [255,128,16,0] =&gt; rgba(255,128,16,0)" time="0.001">
+    </testcase>
+    <testcase classname=" [255,128,16,0.3] =&gt; rgba(255,128,16,0.3)" name=" [255,128,16,0.3] =&gt; rgba(255,128,16,0.3)" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-01-03T01:23:34" time="0.401" tests="5">
+    <testcase classname=" match colormap output" name=" match colormap output" time="0.005">
+    </testcase>
+    <testcase classname=" Uses alpha in from/to" name=" Uses alpha in from/to" time="0">
+    </testcase>
+    <testcase classname=" alpha in from but not in to, will use alpha in from" name=" alpha in from but not in to, will use alpha in from" time="0.001">
+    </testcase>
+    <testcase classname=" alpha in `to` but not in `from`, will use alpha in `to`" name=" alpha in `to` but not in `from`, will use alpha in `to`" time="0">
+    </testcase>
+    <testcase classname=" match actual colors" name=" match actual colors" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-01-03T01:23:34" time="0.435" tests="1">
+    <testcase classname=" summer colors" name=" summer colors" time="0.003">
+    </testcase>
+  </testsuite>
+</testsuites>

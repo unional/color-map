@@ -12,7 +12,7 @@ module.exports = {
   mode: 'production',
   devtool: 'source-map',
   entry: {
-    'color-map': './src/index'
+    'color-map': './ts/index'
   },
   output: {
     path: path.resolve('dist'),

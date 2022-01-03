@@ -18,6 +18,7 @@ lib-cov
 coverage
 .nyc_output
 .progress
+.reports
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
@@ -42,6 +43,8 @@ node_modules
 .idea
 
 # project folders
+cjs
 dist*
+esm
 lib*
 out*

@@ -13,6 +13,6 @@ export function rgbHex(rgb: RGB | RGBA) {
 }
 
 function d2h(d: number) {
-  let s = (+d).toString(16)
+  const s = (+d).toString(16)
   return s.length < 2 ? '0' + s : s
 }

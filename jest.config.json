@@ -1,32 +1,27 @@
 {
   "collectCoverageFrom": [
-    "<rootDir>/src/**/*.[jt]s",
-    "!<rootDir>/src/bin.[jt]s",
-    "!<rootDir>/src/type-checker/*"
+    "<rootDir>/ts/**/*.[jt]s",
+    "!<rootDir>/ts/bin.[jt]s",
+    "!<rootDir>/ts/type-checker/*"
   ],
-    "reporters": [
-      "default",
-      "jest-progress-tracker",
-      [
-        "jest-junit",
-        {
-          "outputDirectory": ".reports/junit",
-          "outputName": "js-test-results.xml"
-        }
-      ]
-    ],
-      "roots": [
-        "<rootDir>/ts"
-      ],
-        "testEnvironment": "node",
-          "testMatch": [
-            "**/?(*.)+(spec|test|integrate|accept|system|unit).[jt]s?(x)"
-          ],
-            "transform": {
-    "^.+\\.(t|j)sx?$": [
-      "@swc/jest"
+  "reporters": [
+    "default",
+    "jest-progress-tracker",
+    [
+      "jest-junit",
+      {
+        "outputDirectory": ".reports/junit",
+        "outputName": "js-test-results.xml"
+      }
     ]
-  },
+  ],
+  "roots": [
+    "<rootDir>/ts"
+  ],
+  "testEnvironment": "node",
+  "testMatch": [
+    "**/?(*.)+(spec|test|integrate|accept|system|unit).[jt]s?(x)"
+  ],
   "watchPlugins": [
     "jest-watch-suspend",
     "jest-watch-typeahead/filename",

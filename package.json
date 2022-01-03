@@ -21,7 +21,7 @@
   "typings": "cjs/index.d.ts",
   "files": [
     "cjs",
-    "dist"
+    "dist",
     "esm",
     "ts"
   ],

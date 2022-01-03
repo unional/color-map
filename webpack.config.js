@@ -3,9 +3,9 @@ const paramCase = require('param-case')
 const pascalCase = require('pascal-case')
 const path = require('path')
 
-const pjson = require('./package.json')
+const pkg = require('./package.json')
 
-const filename = paramCase(pjson.name)
+const filename = paramCase(pkg.name)
 const globalVariable = pascalCase(filename)
 
 module.exports = {
@@ -25,7 +25,7 @@ module.exports = {
         test: /\.tsx?$/,
         loader: 'ts-loader',
         options: {
-          configFile: 'tsconfig.es5.json',
+          configFile: 'tsconfig.cjs.json',
           transpileOnly: true
         }
       }

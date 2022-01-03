@@ -27,19 +27,19 @@
   ],
   "scripts": {
     "build": "run-p build:cjs build:esm",
-    "build+dependency-check": "run-s build dependency-check",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
+    "build:verify": "run-s build dependency-check size-limit",
     "clean": "rimraf cjs esm lib libm",
     "coverage": "jest --coverage",
     "dependency-check": "run-p dependency-check:unused dependency-check:missing",
-    "dependency-check:unused": "dependency-check . --unused --no-dev",
     "dependency-check:missing": "dependency-check . --missing --no-dev",
+    "dependency-check:unused": "dependency-check . --unused --no-dev",
     "lint": "eslint --ext=js,ts .",
     "release": "npx semantic-release",
     "size-limit": "size-limit",
     "test": "jest",
-    "verify": "run-p build+dependency-check lint size-limit coverage",
+    "verify": "run-p build:verify lint coverage",
     "watch": "jest --watch"
   },
   "devDependencies": {

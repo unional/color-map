@@ -26,10 +26,11 @@
     "ts"
   ],
   "scripts": {
-    "build": "run-p build:cjs build:esm",
+    "build": "run-p build:cjs build:esm bundle",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:verify": "run-s build dependency-check size-limit",
+    "bundle": "webpack",
     "clean": "rimraf cjs esm lib libm",
     "coverage": "jest --coverage",
     "dependency-check": "run-p dependency-check:unused dependency-check:missing",

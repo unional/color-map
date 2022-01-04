@@ -37,6 +37,7 @@
     "dependency-check:missing": "dependency-check . --missing --no-dev",
     "dependency-check:unused": "dependency-check . --unused --no-dev",
     "lint": "eslint --ext=js,ts .",
+    "prepublishOnly": "yarn build",
     "release": "npx semantic-release",
     "size-limit": "size-limit",
     "test": "jest",

@@ -1,6 +1,6 @@
 'use strict';
-const paramCase = require('param-case')
-const pascalCase = require('pascal-case')
+const paramCase = require('param-case').paramCase
+const pascalCase = require('pascal-case').pascalCase
 const path = require('path')
 
 const pkg = require('./package.json')

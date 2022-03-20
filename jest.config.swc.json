@@ -11,7 +11,7 @@
       "jest-junit",
       {
         "outputDirectory": ".reports/junit",
-        "outputName": "js-test-results.xml"
+        "outputName": "js-swc-results.xml"
       }
     ]
   ],

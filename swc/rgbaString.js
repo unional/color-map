@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.rgbaString = rgbaString;
+function rgbaString(rgba) {
+    return 'rgba(' + rgba.join(',') + ')';
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3RzL3JnYmFTdHJpbmcudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUkdCQSB9IGZyb20gJy4vaW50ZXJmYWNlcydcblxuZXhwb3J0IGZ1bmN0aW9uIHJnYmFTdHJpbmcocmdiYTogUkdCQSkge1xuICByZXR1cm4gJ3JnYmEoJyArIHJnYmEuam9pbignLCcpICsgJyknO1xufVxuIl0sIm5hbWVzIjpbInJnYmFTdHJpbmciLCJyZ2JhIiwiam9pbiJdLCJtYXBwaW5ncyI6IkFBQUEsWUFBQTs7O0VBQUE7UUFFZ0JBLFVBQVUsR0FBVkEsVUFBVSxBQUYxQjtBQUVPLFNBQVNBLFVBQVUsQ0FBQ0MsSUFBVSxFQUFFO0lBQ3JDLE9BQU8sT0FBTyxHQUFHQSxJQUFJLENBQUNDLElBQUksQ0FBQyxHQUFHLENBQUMsR0FBRyxHQUFHLENBQUM7Q0FDdkMifQ==

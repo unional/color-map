@@ -42,9 +42,19 @@ node_modules
 # webstorm
 .idea
 
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # project folders
-cjs
-dist*
-esm
-lib*
-out*
+/cjs
+/dist
+/esm
+/lib
+/out
+/tslib

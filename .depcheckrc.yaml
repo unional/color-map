@@ -1,0 +1,12 @@
+ignores:
+  - "@commitlint/*"
+  - "@semantic-release/*"
+  - "@size-limit/preset-small-lib"
+  - '@types/node'
+  - "@types/jest"
+  - babel-jest
+  - colormap
+  - jest-*
+  - ts-jest
+  - tslib
+  - webpack-cli

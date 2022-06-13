@@ -4,3 +4,4 @@ cjs
 esm
 lib*
 out*
+tslib

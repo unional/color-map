@@ -13,7 +13,7 @@
     "sourceMap": true,
     "strict": true
   },
-  "files": [
-    "ts/index.ts"
+  "include": [
+    "ts"
   ]
 }

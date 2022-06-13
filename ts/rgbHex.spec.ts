@@ -1,4 +1,4 @@
-import { rgbHex } from '.'
+import { rgbHex } from './index.js'
 
 test('[0,0,0] => #000000', () => {
   expect(rgbHex([0, 0, 0])).toBe('#000000')

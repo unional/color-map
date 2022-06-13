@@ -1,4 +1,4 @@
-import { RGB, RGBA, Alpha } from './interfaces'
+import type { RGB, RGBA, Alpha } from './interfaces.js'
 
 export function createColors(
   from: RGB | RGBA,

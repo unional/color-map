@@ -15,10 +15,11 @@
     "name": "Homa Wong (unional)",
     "email": "homawong@gmail.com"
   },
-  "main": "cjs/index.js",
-  "module": "esm/index.js",
-  "jsnext:main": "esm/index.js",
-  "typings": "cjs/index.d.ts",
+  "type": "module",
+  "exports": {
+    "import": "./esm/index.js"
+  },
+  "types": "./esm/index.d.ts",
   "files": [
     "cjs",
     "dist",
@@ -54,6 +55,10 @@
     "@babel/preset-typescript": "^7.17.12",
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/jest": "^28.1.1",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
@@ -76,6 +81,7 @@
     "pascal-case": "^3.1.2",
     "pinst": "^3.0.0",
     "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.2",
     "size-limit": "^7.0.8",
     "ts-loader": "^9.3.0",
     "tslib": "^2.4.0",
@@ -83,6 +89,7 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2"
   },
+  "packageManager": "yarn@3.2.1",
   "size-limit": [
     {
       "path": "./cjs/index.js",
@@ -96,6 +103,5 @@
       "path": "./tslib/index.js",
       "limit": "5 KB"
     }
-  ],
-  "packageManager": "yarn@3.2.1"
+  ]
 }

@@ -2,6 +2,7 @@
 const paramCase = require('param-case').paramCase
 const pascalCase = require('pascal-case').pascalCase
 const path = require('path')
+const { NormalModuleReplacementPlugin } = require('webpack')
 
 const pkg = require('./package.json')
 
@@ -31,6 +32,12 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new NormalModuleReplacementPlugin(/.js$/, (resource) => {
+      if (/node_modules/.test(resource.context)) return
+      resource.request = resource.request.replace(/.js$/, '')
+    })
+  ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     mainFields: ['jsnext:main', 'browser', 'main']

@@ -1,7 +1,3 @@
 {
-  "extends": "./tsconfig.esm.json",
-  "include": [
-    "ts",
-    "typings"
-  ]
+  "extends": "./tsconfig.esm.json"
 }

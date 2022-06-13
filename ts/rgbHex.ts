@@ -1,4 +1,4 @@
-import { RGB, RGBA } from './interfaces'
+import type { RGB, RGBA } from './interfaces.js'
 
 /**
  * Convert `RGB` to `#rgb`

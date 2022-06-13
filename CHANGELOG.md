@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/unional/color-map/compare/v2.0.0...v2.0.1) (2022-06-13)
+
+
+### Bug Fixes
+
+* use NodeNext module resolution ([#128](https://github.com/unional/color-map/issues/128)) ([fdfc5cc](https://github.com/unional/color-map/commit/fdfc5ccfcc0025d1b2c3ccbe0138c3b491fc7037))
+
 # [2.0.0](https://github.com/unional/color-map/compare/v1.1.4...v2.0.0) (2022-06-13)
 
 

@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/unional/color-map/compare/v2.0.1...v2.0.2) (2022-06-13)
+
+
+### Bug Fixes
+
+* add exports.require for CJS ([b36cde8](https://github.com/unional/color-map/commit/b36cde8cd75e4a00ef572b0b6a4badb2109a1a84))
+
 ## [2.0.1](https://github.com/unional/color-map/compare/v2.0.0...v2.0.1) (2022-06-13)
 
 

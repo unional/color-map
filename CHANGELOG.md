@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/unional/color-map/compare/v2.0.2...v2.0.3) (2022-06-13)
+
+
+### Bug Fixes
+
+* add main field ([3acec72](https://github.com/unional/color-map/commit/3acec726b6a9bfe82cbe6553dec6ba53b659facb))
+
 ## [2.0.2](https://github.com/unional/color-map/compare/v2.0.1...v2.0.2) (2022-06-13)
 
 

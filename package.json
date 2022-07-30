@@ -55,7 +55,7 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.4",
     "@semantic-release/npm": "^9.0.1",
-    "@size-limit/preset-small-lib": "^7.0.8",
+    "@size-limit/preset-small-lib": "^8.0.0",
     "@types/jest": "^28.1.1",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "assertron": "^9.2.4",

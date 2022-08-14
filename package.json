@@ -58,7 +58,7 @@
     "@size-limit/preset-small-lib": "^8.0.0",
     "@types/jest": "^28.1.1",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "assertron": "^9.2.4",
+    "assertron": "^10.0.0",
     "babel-jest": "^28.1.1",
     "colormap": "^2.3.2",
     "depcheck": "^1.4.3",

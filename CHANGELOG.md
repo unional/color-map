@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/unional/color-map/compare/v2.0.5...v2.0.6) (2022-10-03)
+
+
+### Bug Fixes
+
+* re-release again ([cf9ba4c](https://github.com/unional/color-map/commit/cf9ba4c75af52f5803b53a30cb0e003c201595f2))
+
 ## [2.0.5](https://github.com/unional/color-map/compare/v2.0.4...v2.0.5) (2022-10-03)
 
 

@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/unional/color-map/compare/v2.0.3...v2.0.4) (2022-10-03)
+
+
+### Bug Fixes
+
+* cjs package.json ([3b85801](https://github.com/unional/color-map/commit/3b85801902c2b555d9fa9f4bb98a8da23bcd25c6))
+
 ## [2.0.3](https://github.com/unional/color-map/compare/v2.0.2...v2.0.3) (2022-06-13)
 
 

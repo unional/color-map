@@ -33,7 +33,7 @@
     "build": "run-p build:cjs build:esm build:tslib bundle",
     "build:cjs": "tsc -p tsconfig.cjs.json && ncp package.cjs.json cjs/package.json",
     "build:esm": "tsc -p tsconfig.esm.json",
-    "build:tslib": "tsc -p tsconfig.tslib.json",
+    "build:tslib": "tsc -p tsconfig.tslib.json && ncp package.cjs.json tslib/package.json",
     "bundle": "webpack",
     "clean": "rimraf .reports cjs coverage esm lib libm tslib",
     "coverage": "jest --coverage",

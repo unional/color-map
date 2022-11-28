@@ -1,4 +1,4 @@
-import a from 'assertron'
+import { a } from 'assertron'
 import { ColorMap, createColorsFromMap } from './index.js'
 
 test('summer colors', () => {

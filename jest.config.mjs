@@ -1,14 +1,8 @@
 export default {
-  preset: 'ts-jest/presets/default-esm',
-  globals: {
-    'ts-jest': {
-      isolatedModules: true,
-      useESM: true,
-    },
-  },
   collectCoverageFrom: [
     '<rootDir>/ts/**/*.[jt]s'
   ],
+  extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     // remove the phantom `.js` extension
     '^(\\.{1,2}/.*)\\.js$': '$1',
@@ -31,6 +25,10 @@ export default {
     // use `babel-jest` to transpile js files
     // can probably improve this by just doing `.js|mjs` in the `node_modules` folder.
     '^.+\\.(js|jsx|mjs)$': 'babel-jest',
+    '^.+\\.(ts|tsx|mts|cts)$': ['ts-jest', {
+      isolatedModules: true,
+      useESM: true,
+    }]
   },
   watchPlugins: [
     'jest-watch-suspend',

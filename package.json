@@ -60,8 +60,6 @@
     "@types/jest": "^29.0.0",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "assertron": "^11.0.0",
-    "babel-jest": "^29.0.0",
-    "colormap": "^2.3.2",
     "depcheck": "^1.4.3",
     "eslint": "^8.17.0",
     "eslint-plugin-harmony": "^7.1.0",

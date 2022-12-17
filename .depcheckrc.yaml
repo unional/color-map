@@ -1,14 +1,15 @@
+parsers:
+  "**/*.cjs": "es6"
+  "**/*.mjs": "es6"
+  "**/*.ts": "typescript"
 ignores:
   - "@commitlint/*"
+  - "@repobuddy/jest"
   - "@semantic-release/*"
   - "@size-limit/preset-small-lib"
-  - '@types/node'
+  - "@types/node"
   - "@types/jest"
-  - babel-jest
-  - colormap
   - jest-*
-  - param-case
-  - pascal-case
   - semantic-release
   - ts-jest
   - ts-loader

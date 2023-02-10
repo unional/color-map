@@ -1685,18 +1685,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@repobuddy/jest@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@repobuddy/jest@npm:2.1.0"
+"@repobuddy/jest@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@repobuddy/jest@npm:3.0.0"
   dependencies:
     jest-resolve: ^29.3.1
     read-pkg-up: ^7.0.1
-    resolve.imports: ^1.2.3
+    resolve.imports: ^2.0.0
     satisfier: ^5.4.2
-    type-plus: ^4.18.1
+    type-plus: ^5.0.0
   peerDependencies:
     "@kayahr/jest-electron-runner": ^29
-    jest: ^29
+    jest: ">=29.4.0"
     jest-watch-suspend: ^1
     jest-watch-toggle-config-2: ^2
     jest-watch-typeahead: ^2
@@ -1712,7 +1712,7 @@ __metadata:
       optional: true
     ts-jest:
       optional: true
-  checksum: 89a271114779faadbd897a7d423cefc635456347a6d62fb77428957a2e0252399890a17f65f0c020bbe0a53f403a35cfdc42772f6d0c7120af079d1e34f43710
+  checksum: 299fab1640ff27e83d874d8b52ff87f28504f7f80284b5091ad81cfbda410d53eca95e554ae40f04e3ee6c8bb3662f859780ed3ff1f20ba61455f2fa9df05dd2
   languageName: node
   linkType: hard
 
@@ -2652,6 +2652,15 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: aca0aabf98826717920ac2583fdcad0a6fbe4e583fdb6e843af2594e907455aeafe30b1e14f1757cd83ce1776773cf8296ffc3a4acf13f0bd3dfebcf1db6ae80
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^8.8.0":
+  version: 8.8.2
+  resolution: "acorn@npm:8.8.2"
+  bin:
+    acorn: bin/acorn
+  checksum: f790b99a1bf63ef160c967e23c46feea7787e531292bb827126334612c234ed489a0dc2c7ba33156416f0ffa8d25bf2b0fdb7f35c2ba60eb3e960572bece4001
   languageName: node
   linkType: hard
 
@@ -3648,7 +3657,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": ^17.0.2
     "@commitlint/config-conventional": ^17.0.2
-    "@repobuddy/jest": ^2.1.0
+    "@repobuddy/jest": ^3.0.0
     "@semantic-release/changelog": ^6.0.1
     "@semantic-release/git": ^10.0.1
     "@semantic-release/github": ^8.0.4
@@ -8986,6 +8995,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pattern-key-compare@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "pattern-key-compare@npm:2.0.0"
+  checksum: cded15070cddbc5ef7b97c1b91371bcf59ff931f8afe383d2323f935891e6c4517bd76154f5edc2b1ab53c6fbeeb0711b9db43af592064482d0a9ccf03dd507c
+  languageName: node
+  linkType: hard
+
 "picocolors@npm:^1.0.0":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
@@ -9547,10 +9563,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve.imports@npm:^1.2.3":
-  version: 1.2.3
-  resolution: "resolve.imports@npm:1.2.3"
-  checksum: ae1a4b54203335f1232e36d52189eb62b435fb970d1dc4006190bc1e71cd6d76a9d315c09af9bac972c07caf2385095f31aa524b1628258ab1d6a4658ba23cc7
+"resolve.imports@npm:^2.0.0":
+  version: 2.0.3
+  resolution: "resolve.imports@npm:2.0.3"
+  dependencies:
+    pattern-key-compare: ^2.0.0
+  checksum: 155ae4a32ccc1da7ad12b88f6c748dd1e038092838e537de1066248c32a197b42489810da6070bb2bd0dd954e8abbe841b09282c0806c5493b2e49e8f7e29632
   languageName: node
   linkType: hard
 
@@ -10598,6 +10616,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tersify@npm:^3.11.1":
+  version: 3.11.1
+  resolution: "tersify@npm:3.11.1"
+  dependencies:
+    acorn: ^8.8.0
+    is-buffer: ^2.0.5
+    unpartial: ^1.0.0
+  checksum: 4bc7d3ce4dddd672daf943a9a3ce3cece57903ccf07e79273af00f4e147c5b1d992eabec4de0ac5d10ead007f0b48159397ad4afb0b6cbd56be21c4c76c4f407
+  languageName: node
+  linkType: hard
+
 "test-exclude@npm:^6.0.0":
   version: 6.0.0
   resolution: "test-exclude@npm:6.0.0"
@@ -10950,13 +10979,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-plus@npm:^4.18.1":
-  version: 4.18.1
-  resolution: "type-plus@npm:4.18.1"
+"type-plus@npm:^5.0.0":
+  version: 5.6.0
+  resolution: "type-plus@npm:5.6.0"
   dependencies:
-    tersify: ^3.10.2
-    unpartial: ^1.0.3
-  checksum: 04f1cd501440fc3f925f810d440e36c19c2a716c3b57d93984410a4bf4ce892e450f2930d2909a754274b8c6ce7bda97e58ca79b18af2796c924d93242ba77f2
+    tersify: ^3.11.1
+    unpartial: ^1.0.4
+  checksum: 5d85aff5007179973fd949a0637d7d85bc5b136b4d22b4b91f6b8fae11bd60d9fbd4705677cc1612051d218bc7f05a80d7f456d894283bcec71538d1394f90f5
   languageName: node
   linkType: hard
 
@@ -11068,7 +11097,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unpartial@npm:^1.0.3":
+"unpartial@npm:^1.0.0, unpartial@npm:^1.0.4":
   version: 1.0.4
   resolution: "unpartial@npm:1.0.4"
   checksum: 38fc678290a68f216e1b95207ab62e60b2616d9c3107ad3188df47b19ad5231fda0cd6474de23403e70567eb68b2ed01b7577f27a557092e9046725edc8aac41

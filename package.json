@@ -68,7 +68,7 @@
     "jest-junit": "^16.0.0",
     "jest-progress-tracker": "^3.0.4",
     "jest-validate": "^29.0.0",
-    "jest-watch-repeat": "^2.0.0",
+    "jest-watch-repeat": "^3.0.0",
     "jest-watch-suspend": "^1.1.2",
     "jest-watch-toggle-config-2": "^2.1.0",
     "jest-watch-typeahead": "^2.0.0",

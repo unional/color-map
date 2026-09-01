@@ -7,3 +7,14 @@ packages:
 allowBuilds:
   '@swc/core': true
   esbuild: true
+
+# Supply-chain soak: refuse packages published less than 24h ago, so a compromised
+# release has a window to be caught and unpublished before it reaches a build.
+#
+# This must live here, not in .npmrc. pnpm only auto-enables STRICT soak mode when
+# the setting comes from pnpm-workspace.yaml / config.yaml / CLI / env; a value in
+# .npmrc runs in LOOSE mode, where a too-young package is silently appended to
+# minimumReleaseAgeExclude and installed anyway. minimumReleaseAgeStrict is set
+# explicitly so the enforcement does not depend on that inference.
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
